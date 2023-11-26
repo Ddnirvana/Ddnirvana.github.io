@@ -30,6 +30,11 @@
 - title: Services
   type: time_table
   contents:
+    - year: 2023
+      items:
+        - ACM SIGOPS Blog Editor
+        - SOSP 2023 AEC Co-Chair
+        - IEEE CAL (Computer Architecture Letters) 2023, Reviewer
     - year: 2022
       items: 
         - ACM SoCC'22 Program Committee
