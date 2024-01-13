@@ -62,6 +62,9 @@
             {%- endif -%}
             {%- if author_is_self -%}
               <em>{{author.first}} {{author.last}}</em>
+              {% if entry.corresponding -%}
+                <em>>(#)</em>
+              {%- endif %}
             {%- else -%}
               {%- if coauthor_url -%}
                 <a href="{{coauthor_url}}">{{author.first}} {{author.last}}</a>
