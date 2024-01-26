@@ -6,7 +6,7 @@ subtitle: <b>Assistant Professor at <a href='https://ipads.se.sjtu.edu.cn/'>IPAD
 
 profile:
   align: right
-  image: dongdu.jpeg
+  image: dongdu-2024.jpeg
   image_circular: false # crops the image to make it circular
   address: >
    <p>Email: dd_nirvana@sjtu.edu.cn </p>
