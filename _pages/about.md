@@ -21,4 +21,4 @@ My research interests include <b>operating systems, architecture, system securit
 I have built several systems including Penglai TEE (state-of-the-art RISC-V TEE), serverless systems (Catalyzer, ServerlessBench, and Molecule), and RISC-V IPC extension (XPC).
 I am also working on open-sourced communities, including RISC-V (SPMP TG chair), openEuler (RISC-V SIG maintainer) and OpenHarmony (RISC-V and TEE SIG maintainer).
 
-<b>Services</b>: USENIX NSDI'25 TPC, APSys 2024 Publicity Co-Chairs, ACM CCS'24 TPC, ACM SIGOPS Blog Editor, SOSP'23 AEC co-chair, MICRO'22 ERC, SOCC'22 TPC
+<b>Services</b>: USENIX NSDI'25 TPC, APSys 2024 Publicity Co-Chair, ACM CCS'24 TPC, ACM SIGOPS Blog Editor, SOSP'23 AEC Co-Chair, MICRO'22 ERC, ACM SoCC'22 TPC
