@@ -1,6 +1,27 @@
 ---
 ---
 
+@inproceedings{10.1145/3620665.3640378,
+	abbr={ASPLOS},
+	bibtex_show={true},
+	selected={true},
+	corresponding={true},
+author = {Feng, Erhu and Feng, Dahu and Du, Dong and Xia, Yubin and Zheng, Wenbin and Zhao, Siqi and Chen, Haibo},
+title = {sIOPMP: Scalable and Efficient I/O Protection for TEEs},
+year = {2024},
+isbn = {9798400703850},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3620665.3640378},
+doi = {10.1145/3620665.3640378},
+abstract = {Trusted Execution Environments (TEEs), like Intel SGX/TDX, AMD SEV-SNP, ARM TrustZone/CCA, have been widely adopted in prevailing architectures. However, these TEEs typically do not consider I/O isolation (e.g., defending against malicious DMA requests) as a first-class citizen, which may degrade the I/O performance. Traditional methods like using IOMMU or software I/O can degrade throughput by at least 20\% for I/O intensive workloads. The main reason is that the isolation requirements for I/O devices differ from CPU ones. This paper proposes a novel I/O isolation mechanism for TEEs, named sIOPMP (scalable I/O Physical Memory Protection), with three key features. First, we design a Multi-stage-Tree-based checker, supporting more than 1,000 hardware regions. Second, we classify the devices into hot and cold, and support unlimited devices with the mountable entry. Third, we propose a remapping mechanism to switch devices between hot and cold status for dynamic I/O workloads. Evaluation results show that sIOPMP introduces only negligible performance overhead for both benchmarks and real-world workloads, and improves 20\% ~ 38\% network throughput compared with IOMMU-based mechanisms or software I/O adopted in TEEs.},
+booktitle = {Proceedings of the 29th ACM International Conference on Architectural Support for Programming Languages and Operating Systems, Volume 2},
+pages = {1061–1076},
+numpages = {16},
+location = {<conf-loc>, <city>La Jolla</city>, <state>CA</state>, <country>USA</country>, </conf-loc>},
+series = {ASPLOS '24}
+}
+
 @inproceedings{10.1145/3613424.3614293,
 	abbr={MICRO},
 	bibtex_show={true},
