@@ -1,6 +1,28 @@
 ---
 ---
 
+@inproceedings{10.1145/3698038.3698510,
+	abbr={SoCC},
+	bibtex_show={true},
+	selected={true},
+	corresponding={true},
+	author = {Yang, Yanning and Du, Dong and Song, Haitao and Xia, Yubin},
+	title = {On-demand and Parallel Checkpoint/Restore for GPU Applications},
+	year = {2024},
+	isbn = {9798400712869},
+	publisher = {Association for Computing Machinery},
+	address = {New York, NY, USA},
+	url = {https://doi.org/10.1145/3698038.3698510},
+	doi = {10.1145/3698038.3698510},
+	abstract = {Leveraging serverless computing for cloud-based machine learning services is on the rise, promising cost-efficiency and flexibility are crucial for ML applications relying on high-performance GPUs and substantial memory. However, despite modern serverless platforms handling diverse devices like GPUs seamlessly on a pay-as-you-go basis, a longstanding challenge remains: startup latency, a well-studied issue when serverless is CPU-centric. For example, initializing GPU apps with minor GPU models, like MobileNet, demands several seconds. For more intricate models such as GPT-2, startup latency can escalate to around 10 seconds, vastly overshadowing the short computation time for GPU-based inference. Prior solutions tailored for CPU serverless setups, like fork() and Checkpoint/Restore, cannot be directly and effectively applied due to differences between CPUs and GPUs.This paper presents gCROP (GPU Checkpoint/Restore made On-demand and Parallel), the first GPU runtime that achieves <100ms startup latency for GPU apps with up to 774 million parameters (3.1GB GPT-2-Large model). The key insight behind gCROP is to selectively restore essential states on demand and in parallel during boot from a prepared checkpoint image. To this end, gCROP first introduces a global service, GPU Restore Server, which can break the existing barrier between restore stages and achieve parallel restore. Besides, gCROP leverages both CPU and GPU page faults, and can on-demand restore both CPU and GPU data with profile-guided order to mitigate costs caused by faults. Moreover, gCROP designs a multi-checkpoint mechanism to increase the common contents among checkpoint images and utilizes deduplication to reduce storage costs. Implementation and evaluations on AMD GPUs show significant improvement in startup latency, 6.4x-24.7x compared with booting from scratch and 3.9x-23.5x over the state-of-the-art method (CRIU).},
+	booktitle = {Proceedings of the 2024 ACM Symposium on Cloud Computing},
+	pages = {415–433},
+	numpages = {19},
+	keywords = {Checkpoint and Restore, Cloud Computing, GPUs, Startup Latency},
+	location = {Redmond, WA, USA},
+	series = {SoCC '24}
+}
+
 @inproceedings {298488,
 	abbr={ATC},
 	bibtex_show={true},
