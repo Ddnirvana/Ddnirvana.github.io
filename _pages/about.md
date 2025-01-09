@@ -29,3 +29,12 @@ USENIX NSDI'25 TPC, ACM CCS'24 TPC, ACSAC'24 TPC, ChinaSys'24 TPC, ACM SoCC'22 T
 SOSP'23 AEC Co-Chair,
 ASPLOS'24 Workshop (titled: OpenHarmony Tutorial) Co-Chair,
 APSys 2024 Publicity Co-Chair, ACM SIGOPS Blog Editor
+
+<b>
+Internship Opportunities
+</b> <span style="color: red;">
+I am seeking self-motivated students to join research projects focusing on the intersection of Operating Systems (especially OS kernels) and Large Language Models (LLMs).
+If you are interested, feel free to [email me](mailto:dd_nirvana@sjtu.edu.cn).
+I am also open to hearing other thoughts or ideas you might have!
+</span>
+
