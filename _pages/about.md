@@ -18,10 +18,12 @@ social: false  # includes social icons at the bottom of the page
 
 I am an Assistant Professor in the Institute of parallel and distributed systems (IPADS), Shanghai Jiao Tong University.
 My research interests include <b>operating systems, architecture, system security (TEE), serverless computing and HW/SW co-design</b>.
+I am currently working on research projects about the intersection of Operating Systems (especially OS kernels) and Large Language Models (LLMs).
 I have built several systems including Penglai TEE (state-of-the-art RISC-V TEE), serverless systems (Catalyzer, ServerlessBench, and Molecule), and RISC-V IPC extension (XPC).
 I am also working on open-sourced communities, including RISC-V (SPMP TG chair), openEuler (RISC-V SIG maintainer) and OpenHarmony (RISC-V and TEE SIG maintainer).
 
 <b>Services (Program Commitee)</b>:
+USENIX FAST'26 TPC,
 ASPLOS 2026 ERC, MICRO 2025 TPC,
 ISCA 2025 TPC,
 USENIX NSDI'25 TPC, ACM CCS'24 TPC, ACSAC'24 TPC, ChinaSys'24 TPC, ACM SoCC'22 TPC, MICRO'22 ERC
