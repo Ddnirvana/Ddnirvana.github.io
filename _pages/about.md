@@ -23,6 +23,7 @@ I have built several systems including Penglai TEE (state-of-the-art RISC-V TEE)
 I am also working on open-sourced communities, including RISC-V (SPMP TG chair), openEuler (RISC-V SIG maintainer) and OpenHarmony (RISC-V and TEE SIG maintainer).
 
 <b>Services (Program Commitee)</b>:
+HPCA'26 TPC,
 USENIX FAST'26 TPC,
 ASPLOS 2026 ERC, MICRO 2025 TPC,
 ISCA 2025 TPC,
