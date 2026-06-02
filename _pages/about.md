@@ -2,33 +2,45 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
+subtitle: <b>Associate Professor at <a href='https://ipads.se.sjtu.edu.cn/'>IPADS Lab, Shanghai Jiao Tong University</a> </b>
 
 profile:
   align: right
-  image: prof_pic.jpg
+  image: dongdu-2024.jpeg
   image_circular: false # crops the image to make it circular
-  more_info: >
-    <p>555 your office number</p>
-    <p>123 your address street</p>
-    <p>Your City, State 12345</p>
+  address: >
+   <p>Email: dd_nirvana@sjtu.edu.cn </p>
 
+news: true  # includes a list of news items
 selected_papers: true # includes a list of papers marked as "selected={true}"
-social: true # includes social icons at the bottom of the page
-
-announcements:
-  enabled: true # includes a list of news items
-  scrollable: true # adds a vertical scroll bar if there are more than 3 news items
-  limit: 5 # leave blank to include all the news in the `_news` folder
-
-latest_posts:
-  enabled: true
-  scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
-  limit: 3 # leave blank to include all the blog posts
+social: false  # includes social icons at the bottom of the page
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](https://www.reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+I am an Associate Professor in the Institute of parallel and distributed systems (IPADS), Shanghai Jiao Tong University.
+My research interests include <b>operating systems, agent systems/infras, architecture, system security (TEE), serverless computing and HW/SW co-design</b>.
+I am currently working on research projects about <b>the intersection of Operating Systems (especially OS kernels) and Large Language Models (LLMs), including generative OSes (e.g., SpecFS in FAST'26) and Agentic OS</b>.
+I have built several systems including Penglai TEE (state-of-the-art RISC-V TEE), serverless systems (Catalyzer, ServerlessBench, and Molecule), and RISC-V IPC extension (XPC).
+I am also working on open-sourced communities, including RISC-V (SPMP TG chair), openEuler (RISC-V SIG maintainer) and OpenHarmony (RISC-V and TEE SIG maintainer).
 
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+<b>Services (Program Commitee)</b>:
+SOSP'26 TPC,
+SoCC'26 TPC,
+HPCA'26 TPC,
+USENIX FAST'26 TPC,
+ASPLOS 2026 ERC, MICRO 2025 TPC,
+ISCA 2025 TPC,
+USENIX NSDI'25 TPC, ACM CCS'24 TPC, ACSAC'24 TPC, ChinaSys'24 TPC, ACM SoCC'22 TPC, MICRO'22 ERC
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+<b>Services (Organizing Commitee)</b>:
+SOSP'23 AEC Co-Chair,
+ASPLOS'24 Workshop (titled: OpenHarmony Tutorial) Co-Chair,
+APSys 2024 Publicity Co-Chair, ACM SIGOPS Blog Editor
+
+<b>
+Internship Opportunities
+</b> <span style="color: red;">
+I am seeking self-motivated students to join research projects focusing on the intersection of Operating Systems (especially OS kernels) and Large Language Models (LLMs).
+If you are interested, feel free to [email me](mailto:dd_nirvana@sjtu.edu.cn).
+I am also open to hearing other thoughts or ideas you might have!
+</span>
+
