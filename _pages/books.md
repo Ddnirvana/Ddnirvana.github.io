@@ -1,4 +1,5 @@
 ---
+published: false # Set true and remove the _config.yml exclusion when this page is ready.
 layout: book-shelf
 title: bookshelf
 permalink: /books/

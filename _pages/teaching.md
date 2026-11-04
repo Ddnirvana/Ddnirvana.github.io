@@ -1,9 +1,10 @@
 ---
+published: false # Set true and remove the _config.yml exclusion when this page is ready.
 layout: page
 permalink: /teaching/
 title: teaching
 description: Course materials, schedules, and resources for classes taught.
-nav: true
+nav: false
 nav_order: 6
 calendar: true
 ---

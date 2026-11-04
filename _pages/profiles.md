@@ -1,9 +1,10 @@
 ---
+published: false # Set true and remove the _config.yml exclusion when this page is ready.
 layout: profiles
 permalink: /people/
 title: people
 description: members of the lab or group
-nav: true
+nav: false
 nav_order: 7
 
 profiles:

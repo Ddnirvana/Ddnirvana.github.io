@@ -1,9 +1,19 @@
-"AJP":
-  url: https://aapt.scitation.org/journal/ajp
-  color: "#00369f"
-
-"PhysRev":
-  url: https://journals.aps.org/
-
-"Vision":
-  color: "#009f36"
+# Venue badges; publication-specific links live in the BibTeX entries.
+SOSP:
+  color: "#244a73"
+OSDI:
+  color: "#244a73"
+FAST:
+  color: "#244a73"
+ASPLOS:
+  color: "#315f53"
+ISCA:
+  color: "#315f53"
+SoCC:
+  color: "#675381"
+ATC:
+  color: "#244a73"
+SIGCSE:
+  color: "#675381"
+TOCS:
+  color: "#244a73"

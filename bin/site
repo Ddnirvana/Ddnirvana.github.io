@@ -1,0 +1,47 @@
+#!/usr/bin/env bash
+# Build/preview without changing the system Ruby or restoring tracked lockfiles.
+set -euo pipefail
+SITE_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+SITE_TOOLS="${HOMEPAGE_TOOLS_DIR:-$(dirname "$SITE_ROOT")/.homepage-tools}"
+if [[ -x "$SITE_TOOLS/portable-ruby/4.0.9/bin/ruby" ]]; then
+  export PATH="$SITE_TOOLS/portable-ruby/4.0.9/bin:$PATH"
+  export GEM_HOME="$SITE_TOOLS/gems/ruby/4.0.0"
+  export BUNDLE_PATH="$SITE_TOOLS/gems"
+fi
+# Locked native gems need glibc >= 2.28; the desktop's Ubuntu 18.04 has 2.27.
+# Reuse its existing Ubuntu 22.04 image without replacing host libraries.
+if [[ "$(uname -s)" == Linux && -z "${HOMEPAGE_IN_CONTAINER:-}" && -x "$SITE_TOOLS/portable-ruby/4.0.9/bin/ruby" ]]; then
+  SITE_GLIBC="$(getconf GNU_LIBC_VERSION | awk '{print $2}')"
+  if [[ "$(printf '%s\n' 2.28 "$SITE_GLIBC" | sort -V | head -n 1)" != 2.28 ]]; then
+    SITE_DOCKER_ARGS=(--rm --user "$(id -u):$(id -g)" --env HOMEPAGE_IN_CONTAINER=1 --env "HOMEPAGE_TOOLS_DIR=$SITE_TOOLS"
+      -v "$SITE_TOOLS:$SITE_TOOLS" -v "$SITE_ROOT:$SITE_ROOT" -v "$(command -v node):/usr/local/bin/node:ro" -w "$SITE_ROOT")
+    if [[ "${1:-build}" == serve ]]; then SITE_DOCKER_ARGS+=(-p 127.0.0.1:18765:18765); fi
+    exec docker run "${SITE_DOCKER_ARGS[@]}" ubuntu:22.04 bash "$SITE_ROOT/bin/site" "$@"
+  fi
+fi
+case "$(uname -s)" in
+  Darwin) export LANG=en_US.UTF-8 LC_ALL=en_US.UTF-8 ;;
+  *) export LANG=C.UTF-8 LC_ALL=C.UTF-8 ;;
+esac
+export BUNDLE_FROZEN=true
+cd "$SITE_ROOT"
+if ! ruby -e 'exit(Gem::Version.new(RUBY_VERSION) >= Gem::Version.new("3.3") ? 0 : 1)' 2>/dev/null; then
+  echo 'Ruby 3.3+ is required. Put a compatible Ruby on PATH; see docs/PERSONAL-SITE.md.' >&2
+  exit 1
+fi
+SITE_COMMAND="${1:-build}"
+if [[ $# -gt 0 ]]; then shift; fi
+case "$SITE_COMMAND" in
+  build) JEKYLL_ENV=production bundle exec jekyll build "$@" ;;
+  serve)
+    JEKYLL_ENV=production bundle exec jekyll build "$@"
+    SITE_BIND=127.0.0.1
+    if [[ -n "${HOMEPAGE_IN_CONTAINER:-}" ]]; then SITE_BIND=0.0.0.0; fi
+    exec bundle exec ruby -run -e httpd _site -p 18765 -b "$SITE_BIND"
+    ;;
+  audit)
+    bundle exec al-folio upgrade audit --no-fail "$@"
+    bundle exec al-folio upgrade overrides audit
+    ;;
+  *) echo 'Usage: bin/site [build|serve|audit] [Jekyll/audit options]' >&2; exit 2 ;;
+esac

@@ -1,11 +1,11 @@
 ---
+published: true
 layout: page
-title: projects
+title: Projects
 permalink: /projects/
-description: A growing collection of your cool projects.
+description: Research software for AI/Agentic Operating Systems.
 nav: true
 nav_order: 3
-display_categories: [work, fun]
 horizontal: false
 ---
 
