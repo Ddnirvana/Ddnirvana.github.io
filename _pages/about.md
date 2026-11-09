@@ -34,6 +34,7 @@ My **past work** includes serverless computing (Catalyzer, ServerlessBench, and 
 I am also working on open-sourced communities, including RISC-V (SPMP TG chair), openEuler (RISC-V SIG maintainer) and OpenHarmony (RISC-V and TEE SIG maintainer).
 
 <b>Services (Program Committee)</b>:
+ISCA'27 TPC,
 HPCA 2027 TPC,
 SOSP'26 TPC,
 SoCC'26 TPC,
