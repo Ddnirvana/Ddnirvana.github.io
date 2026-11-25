@@ -31,6 +31,8 @@ My research spans four directions:
 
 My **past work** includes serverless computing (Catalyzer, ServerlessBench, and Molecule), trusted execution environments (Penglai TEE), and hardware/software co-design (the RISC-V XPC extension).
 
+Our work has received the **SOSP 2025 Best Paper Award**, the **FAST 2026 Best Paper Award and Distinguished Artifact Award**, and the **ATC 2026 Best Paper Award**.
+
 I am also working on open-sourced communities, including RISC-V (SPMP TG chair), openEuler (RISC-V SIG maintainer) and OpenHarmony (RISC-V and TEE SIG maintainer).
 
 <b>Services (Program Committee)</b>:
