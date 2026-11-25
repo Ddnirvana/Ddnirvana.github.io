@@ -1,0 +1,10 @@
+// The venue palette in _data/venues.yml uses dark backgrounds in both themes.
+// Inner divs otherwise pick up the theme's body-text color instead of inheriting.
+.publications .abbr abbr.badge[style*="background-color"] {
+  color: #fff !important;
+
+  > div,
+  > a {
+    color: inherit;
+  }
+}

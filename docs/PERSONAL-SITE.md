@@ -11,6 +11,12 @@ The public site is https://dongd.info/ (CNAME: `dongd.info`). This is a customiz
 - `_data/cv.yml`: migrated personal CV in the v1 schema. It remains unpublished and needs a content review before release. `_data/cv_legacy.yml` preserves the complete previous CV verbatim, including historical titles and dates; do not infer a promotion date from the current title.
 - `assets/img/dongdu-profile.jpg`: optimized 1000-pixel portrait used by the page. The full-resolution `dongdu-2024.jpeg` is retained in source and excluded from the public build. Earlier personal photos `dongd.jpeg` and `dongdu.jpeg` are also preserved.
 
+## Venue badge colors
+
+The dark venue colors in `_data/venues.yml` use white text in both light and dark themes. `assets/_sass/_personal-site.scss` targets badges with an explicit background color, sets their foreground, and makes the inner text/link inherit it; the theme's generic `div` rule would otherwise make plain venue names black in light mode. Badges without a configured venue color retain the theme's default foreground/background pairing.
+
+`assets/css/main.scss` is an intentional override of the pinned theme's Sass entry point, with one additional `@use "../_sass/personal-site"` import. The partial lives under `assets/_sass` so the theme's CSS cache-busting filter includes it in the stylesheet URL hash. Its upstream fingerprint is recorded in `.al-folio-overrides.yml`. Review the override audit/diff when upgrading `al_folio_core`, and preserve the site's import when reconciling upstream changes.
+
 A bibliography entry should have a unique key and official author order/title/year/venue. Use the publisher's DOI or page URL. Set `bibtex_show={true}`, a venue `abbr`, and `selected={true}` only if it belongs on the homepage. Existing `corresponding` information is retained, displayed via `additional_info`, and excluded from exported BibTeX. The complete sources and unresolved details for this update are in `PUBLICATION-SOURCES.md`.
 
 ## Reopen a page when ready
